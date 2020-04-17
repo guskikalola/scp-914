@@ -1,0 +1,23 @@
+body {
+    height: 100%;
+    margin-top:0;
+    margin-left: 0;
+    position: absolute;
+    width: 100%;
+}
+#page-background {
+    background-color: #771811;
+    width: 100%;
+    height: 100%;
+}
+#page-top-bar {
+    background-color: #310d0a;
+    width: 100%;
+    height: 5pc;
+    top: 0;
+    position: fixed;
+}
+#page-top-bar .button * {
+    height: 100%;
+    position: relative;
+}
