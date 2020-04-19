@@ -1,0 +1,8 @@
+{
+    "first" : {
+        "input": ["hamburger"],
+        "coarse": {
+            "output": ["cheese","lettuce","tomato","meat","bread"]
+        }
+    }
+}
