@@ -27,14 +27,18 @@ Array.prototype.toLowerCase = function() {
     return loweredArray;
 }
 
+
 export default class SCP914 {
+    // Is the SCP914 refining?
+    static refining = false;
     /**
      * From input to output conversion
      * @param {String} input - Input object(s)
      * @param {String} mode - The conversion mode ( Fine, very fine... )
      */
-    
     static async conversion(mode,input) {
+        if(this.refining) return
+        else this.refining = true;
         mode = mode.toLowerCase();
         input = input.toLowerCase();
         // If the conversion table never got loaded, then load it.

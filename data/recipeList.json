@@ -1,8 +1,21 @@
 {
     "first" : {
         "input": ["hamburger"],
+        "rough": {
+            "output": ["A strange mass with pieces of meat, cheese, bread, lettuce and tomato"]   
+        },
         "coarse": {
             "output": ["cheese","lettuce","tomato","meat","bread"]
+        },
+        "1:1": {
+            "output": ["A ████████'s brand ████████ hamburger"]
+        },
+        "fine": {
+            "output":["A full meal from ████████'s brand consisting of fried chips, a hamburger and a soda"]
+        },
+        "veryfine": {
+            "output": ["Two super meals from ████████'s brand consisting of two hamburgers, two sodas and a XL fried chips box"]
         }
+
     }
 }

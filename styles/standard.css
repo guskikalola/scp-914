@@ -1,3 +1,6 @@
+/*
+    Page style
+*/
 body {
     height: 100%;
     margin-top:0;
@@ -21,16 +24,147 @@ body {
     height: 100%;
     position: relative;
 }
-
+#input-menu {
+    background-color: #aab4997a;
+    height: 40vh;
+    width: 67vh;
+    position: absolute;
+    top: 60vh;
+    visibility: hidden;
+}
+.input-menu-item {
+    position: relative;
+    height: 10vh;
+}
+/*
+    SCP 914 Style
+*/
+/* Machine Style */
 #SCP914 {
-    left: calc(50% - 10vw);
+    visibility: hidden;
+    left: calc(70% - 8vw);
     position: absolute;
     background-color: red;
     margin-top: 20pc;
-    width: 20vw;
-    height: 20vw;
+    width: 12vw;
+    height: 12vw;
 }
+#scp914-input {
+    z-index: 1;
+    border: black solid 2px;
+    position: absolute;
+    width: 100%;  
+    right:100%; 
+    top: calc(50% - 4vh);   
+}
+#scp914-output {
+    z-index: 1;
+    border: black solid 2px;
+    position: absolute;
+    width: 100%;
+    left: 101%;
+    top: calc(50% - 4vh);   
+}
+#scp914-inputRoom-container {
+    width: 30vh;
+    height: 30vh;
+    position: absolute;
+    right: 157%;
+    top: calc(50% - 14vh);
+    z-index: 2;
+}
+#scp914-outputRoom-container {
+    width: 30vh;
+    height: 30vh;
+    position: absolute;
+    left: 157%;
+    top: calc(50% - 14vh);
+    z-index: 2;
+}
+#scp914-inputRoom {
+    height: 80%;
+    position: absolute;
+    z-index: 2;
+    right: 4vh;
+}
+#scp914-outputRoom {
+    height: 80%;
+    z-index: 2;
+    position: absolute;
+    left: 4vh;
+    transform: scaleX(-1);
+}
+#scp914-inputRoom-inside {
+    position: absolute;
+    z-index: 0;
+    left: 43%;
+    height: 48%;
+    top: 9.66vh;
+    
+}
+
+#scp914-outputRoom-inside {
+    z-index: 0;
+    transform: scaleX(-1);
+    position: absolute;
+    z-index: 0;
+    right: 43%;
+    height: 48%;
+    top: 9.66vh;
+}
+#scp914-inputRoom-door {
+    transition: right 1s;
+    position: absolute;
+    right: 16.6vh;
+    top: 7.5vh;
+    height: 55.4%;
+
+}
+#scp914-outputRoom-door {
+    transform: scaleX(-1);
+    transition: left 1s;
+    position: absolute;
+    left: 16.6vh;
+    top: 7.5vh;
+    height: 55.4%;
+}
+
+/* Gear's style */
+.gear {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    z-index: 0;
+    transition: transform 2s;
+    transform: rotate(0deg);
+}
+#gear1-1 {
+    right: calc(100% - 2.4vh);
+    bottom: 4vh;
+}
+#gear1-2 {
+    left: calc(100% - 2.4vh);
+    bottom: 3vh;
+}
+#gear1-3 {
+    left: calc(100% - 2.4vh);
+    top: 4.7vh;
+}
+#gear2-1 {
+    right: calc(100% - 4.4vh);
+    bottom: 1vh;
+}
+#gear2-2 {    
+    right: calc(100% - 3.4vh);
+    top: 2vh;
+}
+
+
+
+/* Pannel Style */
 #machine-panel {
+    z-index: 1;
+    border: black solid 2px;
     position: absolute;   
     left: 0;
     top: 0;
@@ -38,6 +172,7 @@ body {
     height: 100%;
 }
 #panel-change {
+    z-index: 1;
     display: block;
     margin: auto;
     margin-top: 32%;
@@ -46,10 +181,60 @@ body {
     transform: rotate(-94deg);
 }
 #panel-button {
+    z-index: 1;
     position: relative;
     display: block;
     margin: auto;
     margin-top: 20%;
     height: 20%;
     z-index: 2;
+    transition: height 500ms;
 }
+/*
+    Debug Console Style
+*/
+#debug-console {
+    top:5pc;
+    position: fixed;
+    height: 50vh;
+    width: 35vw;
+    visibility: visible;
+    background-color: rgba(240, 248, 255, 0.349);
+}
+#terminal-image {
+    border: #310d0a solid 4px;
+    width: 100%;
+    height: 100%;
+}
+#terminal-log {
+    color:#1eff00;
+    margin-left: 0.3vw;
+}
+#log-container {
+    top:0.25vh;
+    left: 0.3vw;
+    overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#terminal-input-box {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    background-color: gray;
+    width: 87%;
+    left: 0.3vw;
+    color:rgb(11, 230, 11);
+}
+#terminal-send-button {
+    border:none;
+    width: calc(8%);
+    position: absolute;
+    right: 1vw;
+    bottom: 0;
+    height: 2vh;
+}
+
+
